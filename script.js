@@ -49,12 +49,16 @@ function playRound(playerSelection, computerSelection) {
 const buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
-        console.log(playRound(`${button.id}`, computerSelection));
+        //console.log(playRound(`${button.id}`, computerSelection));
+        const result = document.createElement('div');
+        result.textContent = playRound(`${button.id}`, computerSelection);  
+        titleH1.appendChild(result);  
     })
 })
 
 const playerSelection = buttons;
 const computerSelection = computerPlay();
+
 
 //console.log(playRound(playerSelection, computerSelection));
 
