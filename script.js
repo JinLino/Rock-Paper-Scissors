@@ -45,11 +45,21 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-const playerSelection = "rock";
+
+const buttons = document.querySelectorAll('button');
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        console.log(playRound(`${button.id}`, computerSelection));
+    })
+})
+
+const playerSelection = buttons;
 const computerSelection = computerPlay();
 
-console.log(playRound(playerSelection, computerSelection));
+//console.log(playRound(playerSelection, computerSelection));
 
+
+//Five rounds exercise
 /*
 function game() {
     for (let i = 0; i < 5; i++) {
