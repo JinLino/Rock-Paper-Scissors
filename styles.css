@@ -2,6 +2,12 @@ h1 {
     text-align: center;
     font-size: 2em;
     font-weight: 200;
+    color: white;
+}
+h2 {
+    text-align: center;
+    font-weight: 200;
+    color: white;
 }
 
 .btns {
@@ -30,4 +36,12 @@ button:hover {
 
 div #restart {
     text-align: center;
+}
+
+body {
+    background-color: #1d1f2a;
+}
+
+#points {
+    font-size: 3em;
 }
