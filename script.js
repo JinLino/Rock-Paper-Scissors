@@ -17,6 +17,14 @@ function computerPlay(){
     }
 }
 
+const restart = document.querySelector('#restart');
+restart.addEventListener('click', () => {
+    //const remove = document.getElementById('game'); //because it will delete in a row, but not directly the last one
+    const remove = document.querySelector('div:last-child');
+    remove.parentElement.removeChild(remove)
+    })
+
+
 
 function playRound(playerSelection, computerSelection) {
     if(playerSelection === computerSelection){
@@ -41,7 +49,7 @@ function playRound(playerSelection, computerSelection) {
         return "Player: " + playerSelection + '\n' +"Computer: " + computerSelection + '\n' + "The player has won!";
     }
     else {
-        return "I'm overwhelmed";
+        return;
     }
 }
 
@@ -51,6 +59,7 @@ buttons.forEach((button) => {
     button.addEventListener('click', () => {
         //console.log(playRound(`${button.id}`, computerSelection));
         const result = document.createElement('div');
+        result.setAttribute('id', 'game');
         result.textContent = playRound(`${button.id}`, computerSelection);  
         titleH1.appendChild(result);  
     })
